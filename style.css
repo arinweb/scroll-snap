@@ -1,0 +1,81 @@
+/* ALL */
+*{
+  margin:0px;
+  padding:0px;
+  font-family:Poppins;
+}
+
+/* MAIN */
+html,body{
+  scroll-behavior:smooth;
+  overflow:hidden;
+}
+
+/* CONTAINER */
+.container{
+  width:100vw;
+  height:100vh;
+  display:flex;
+  scroll-behavior:smooth;
+}
+
+/* SCROLL TYPE */
+.x-mandatory{
+  scroll-snap-type:x mandatory;
+  overflow:scroll hidden;
+  flex-direction:row;
+}
+.y-mandatory{
+  scroll-snap-type:y mandatory;
+  overflow:hidden scroll;
+  flex-direction:column;
+}
+.x-proximity{
+  scroll-snap-type:x proximity;
+  overflow:scroll hidden;
+  flex-direction:row;
+}
+.y-proximity{
+  scroll-snap-type:y proximity;
+  overflow:hidden scroll;
+  flex-direction:column;
+}
+
+/* PAGE */
+.container > .page{
+  color:white;
+  font-size:1.5rem;
+  min-width:100vw;
+  min-height:100vh;
+  width:100%;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--bg);
+  scroll-snap-stop:always;
+  scroll-snap-align:start;
+  overflow:hidden;
+}
+
+/* PAGE BACKGROUND COLOR */
+#page_1{--bg:#119abc;}
+#page_2{--bg:#0b8b1d;}
+#page_3{--bg:#ba9d09;}
+#page_4{--bg:#ca0606;}
+#page_5{--bg:#118c76;} 
+
+/* CONTENT */
+.container > .page > .content{
+  width:100%;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+}
+.container > .page > .content > p{
+  font-size:0.9rem;
+  text-align:center;
+  margin:20px;
+}
